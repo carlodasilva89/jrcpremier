@@ -1,0 +1,300 @@
+:root {
+    /* Ocean Breeze Palette */
+    --primary-blue: #465b65;
+    /* Dark Slate for text and footer */
+    --brand-red: #ff6b6b;
+    /* Salmon Red for JRC */
+    --brand-dark-blue: #465b65;
+    /* Dark Slate for PREMIER */
+    --icon-bg: #465b65;
+    /* Dark Slate for Icons */
+    --text-color: #465b65;
+    --card-bg: #e2e8f0;
+    /* Solid Light Grey */
+    --phone-icon-color: #4caf50;
+    /* Keep green or change to palette? Let's keep green for now as standard phone color */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #333;
+    /* Dark background for the page to make card pop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card-container {
+    width: 600px;
+    height: 350px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sun Background Effect */
+.sun-bg {
+    position: absolute;
+    top: -50px;
+    left: 100px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(220, 240, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun-bg::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(200, 230, 255, 0.4);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(200, 230, 255, 0.6);
+}
+
+.ray {
+    position: absolute;
+    width: 4px;
+    height: 160px;
+    background: linear-gradient(to bottom, rgba(200, 230, 255, 0), rgba(200, 230, 255, 0.5), rgba(200, 230, 255, 0));
+    top: 20px;
+    left: 50%;
+    transform-origin: center;
+}
+
+.ray-1 {
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.ray-2 {
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.ray-3 {
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.ray-4 {
+    transform: translateX(-50%) rotate(135deg);
+}
+
+.ray-5 {
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.ray-6 {
+    transform: translateX(-50%) rotate(225deg);
+}
+
+.ray-7 {
+    transform: translateX(-50%) rotate(270deg);
+}
+
+.ray-8 {
+    transform: translateX(-50%) rotate(315deg);
+}
+
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 20px 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    /* Serif font for the main logo */
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.brand-red {
+    color: var(--brand-red);
+}
+
+.brand-blue {
+    color: var(--brand-dark-blue);
+}
+
+.brand-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: var(--brand-dark-blue);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.main-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--icon-bg);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.line-1 {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.line-2 {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.qr-container {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -15px;
+    margin-bottom: 95px;
+}
+
+.qr-box {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.qr-placeholder-content {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #94a3b8;
+    gap: 5px;
+}
+
+.qr-placeholder-content i {
+    font-size: 32px;
+}
+
+.qr-placeholder-content span {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* Footer Section */
+.footer-curve {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 110px;
+    background-color: var(--primary-blue);
+    border-top-left-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    z-index: 2;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center align name and phone */
+    color: white;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone-icon {
+    color: var(--phone-icon-color);
+    font-size: 20px;
+    /* If it's a circle icon in the image */
+    /* background-color: var(--phone-icon-color); */
+    /* color: white; */
+    /* width: 24px; height: 24px; border-radius: 50%; display: flex; ... */
+    /* But looking at image it looks like just a green icon */
+}
+
+.phone-number {
+    font-size: 24px;
+    font-weight: 700;
+}
